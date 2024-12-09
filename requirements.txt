@@ -1,0 +1,4 @@
+garak
+uvicorn
+fastapi
+pydantic
