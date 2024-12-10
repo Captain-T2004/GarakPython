@@ -1,0 +1,6 @@
+docker build -t custom-postgres .
+
+docker run -d \
+  --name garak-postgres \
+  -p 4444:5432 \
+  custom-postgres
