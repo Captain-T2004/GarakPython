@@ -1,0 +1,6 @@
+docker build -t garak_python .
+
+docker run \                                                                                                                                                                       ─╯
+    -p 8000:8000 \
+    --add-host=host.docker.internal:host-gateway \
+    garak_python
