@@ -6,12 +6,12 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-# Use environment variables in production
+
 SQLALCHEMY_DATABASE_URL = f"postgresql://{os.getenv('DATABASE_USER')}:{os.getenv('DATABASE_PASSWORD')}@{os.getenv('DATABASE_HOST')}:{os.getenv('DATABASE_PORT')}/{os.getenv('DATABASE_NAME')}"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, 
-    poolclass=NullPool  # Helpful for containerization
+    poolclass=NullPool  
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
