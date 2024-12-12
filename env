@@ -1,0 +1,18 @@
+# Database Configuration
+DATABASE_USER=postgres
+DATABASE_PASSWORD=admin_password
+DATABASE_HOST=host.docker.internal
+DATABASE_PORT=4444
+DATABASE_NAME=scannerdb
+
+# Authentication
+SECRET_KEY="generate a secret key using openssl"
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# Garak Report Directory 
+REPORT_DIRECTORY=/root/.local/share/garak/garak_runs/
+
+# Application Settings
+APP_HOST=0.0.0.0
+APP_PORT=8000
